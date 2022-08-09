@@ -1,4 +1,4 @@
-name: xgboost_docs
+name: spkit_docs
 dependencies:
   - python
   - pip
@@ -8,6 +8,7 @@ dependencies:
   - mock
   - sh
   - matplotlib
+  - phyaat
   - pip:
     - breathe
     - sphinx_rtd_theme
