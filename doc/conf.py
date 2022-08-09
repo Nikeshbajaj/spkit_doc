@@ -33,6 +33,7 @@ else:
     git_branch = [git_branch]
 print('git_branch = {}'.format(git_branch[0]))
 
+'''
 try:
     filename, _ = urllib.request.urlretrieve(
         'https://s3-us-west-2.amazonaws.com/xgboost-docs/{}.tar.bz2'.format(
@@ -61,20 +62,23 @@ curr_path = os.path.dirname(os.path.abspath(os.path.expanduser(__file__)))
 libpath = os.path.join(curr_path, '../python-package/')
 sys.path.insert(0, libpath)
 sys.path.insert(0, curr_path)
+'''
 
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
-project = u'xgboost'
+project = u'spkit'
 author = u'%s developers' % project
 copyright = u'2021, %s' % author
-github_doc_root = 'https://github.com/dmlc/xgboost/tree/master/doc/'
+github_doc_root = 'https://github.com/nikesjbajaj/spkit_doc/tree/master/doc/'
 
+'''
 os.environ['XGBOOST_BUILD_DOC'] = '1'
+'''
 # Version information.
-import xgboost                  # NOQA
-version = xgboost.__version__
-release = xgboost.__version__
+import spkit                  # NOQA
+version = spkit.__version__
+release = spkit.__version__
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones
@@ -89,6 +93,7 @@ extensions = [
     'recommonmark'
 ]
 
+'''
 sphinx_gallery_conf = {
     # path to your example scripts
     "examples_dirs": ["../demo/guide-python", "../demo/dask"],
@@ -96,7 +101,7 @@ sphinx_gallery_conf = {
     "gallery_dirs": ["python/examples", "python/dask-examples"],
     "matplotlib_animations": True,
 }
-
+'''
 autodoc_typehints = "description"
 
 graphviz_output_format = 'png'
@@ -104,10 +109,11 @@ plot_formats = [('svg', 300), ('png', 100), ('hires.png', 300)]
 plot_html_show_source_link = False
 plot_html_show_formats = False
 
+'''
 # Breathe extension variables
-breathe_projects = {"xgboost": "doxyxml/"}
-breathe_default_project = "xgboost"
-
+breathe_projects = {"spkit": "doxyxml/"}
+breathe_default_project = "spkit"
+'''
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -176,7 +182,9 @@ html_theme = "sphinx_rtd_theme"
 html_theme_options = {"logo_only": True}
 
 
-html_logo = "https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png"
+#html_logo = "https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png"
+html_logo = "https://raw.githubusercontent.com/spkit/spkit.github.io/master/assets/logo/logo.png"
+#https://github.com/spkit/spkit.github.io/blob/master/assets/logo/logo.png
 
 html_css_files = ["css/custom.css"]
 
@@ -207,11 +215,7 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3.6", None),
     "numpy": ("https://docs.scipy.org/doc/numpy/", None),
     "scipy": ("https://docs.scipy.org/doc/scipy/reference/", None),
-    "pandas": ("https://pandas.pydata.org/pandas-docs/stable/", None),
-    "sklearn": ("https://scikit-learn.org/stable", None),
-    "dask": ("https://docs.dask.org/en/stable/", None),
-    "distributed": ("https://distributed.dask.org/en/stable/", None),
-    "pyspark": ("https://spark.apache.org/docs/latest/api/python/", None),
+    "phyaat": ("https://pypi.org/project/phyaat/", None),
 }
 
 
