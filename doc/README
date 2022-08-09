@@ -1,4 +1,4 @@
-The documentation of xgboost is generated with recommonmark and sphinx.
+The documentation of spkit is generated with recommonmark and sphinx.
 
 You can build it locally by typing "make html" in this folder.
 
