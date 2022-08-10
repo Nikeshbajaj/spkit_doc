@@ -216,6 +216,7 @@ intersphinx_mapping = {
     "numpy": ("https://docs.scipy.org/doc/numpy/", None),
     "scipy": ("https://docs.scipy.org/doc/scipy/reference/", None),
     "phyaat": ("https://pypi.org/project/phyaat/", None),
+    "spkit": ("https://pypi.org/project/spkit/", None),
 }
 
 
