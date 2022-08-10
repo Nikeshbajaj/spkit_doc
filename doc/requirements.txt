@@ -7,3 +7,4 @@ graphviz
 numpy
 recommonmark
 sphinx-gallery
+spkit
