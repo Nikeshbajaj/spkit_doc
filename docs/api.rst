@@ -7,8 +7,9 @@ Entropy Functions
 .. autofunction:: spkit.entropy
 .. autofunction:: spkit.mutual_Info
 
-.. automodule:: spkit.core.infotheory
-    :members:
+.. 
+    .. automodule:: spkit.core.infotheory
+        :members:
 
 
 
