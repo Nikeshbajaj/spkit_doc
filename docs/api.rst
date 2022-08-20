@@ -4,6 +4,15 @@ API docs
 Entropy Functions
 -----------------
 
+.. autofunction:: spkit.entropy
+.. autofunction:: spkit.mutual_Info
+
+.. automodule:: spkit.core.infotheory
+    :members:
+
+
+
+
 ::
 
     spkit.entropy
