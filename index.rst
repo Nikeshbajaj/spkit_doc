@@ -3,6 +3,7 @@ Signal Processing Toolkit - Documentation!
 
 .. image:: https://raw.githubusercontent.com/Nikeshbajaj/spkit/master/figures/cwt_ex0.jpg
 
+---
 
 .. image:: https://img.shields.io/circleci/build/github/Nikeshbajaj/spkit
   :target: https://pypi.python.org/pypi/spkit
