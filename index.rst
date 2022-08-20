@@ -24,6 +24,8 @@ Signal Processing Toolkit - Documentation!
   :target: https://github.com/Nikeshbajaj/spkit
   :alt: GitHub
 
+---
+
 .. important::
 
     Version: 0.0.9.4 | Released on 01/01/2022
