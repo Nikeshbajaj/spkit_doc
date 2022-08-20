@@ -30,8 +30,8 @@ release = '0.0.9.4'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+#extensions = []
+extensions = ['sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -60,6 +60,9 @@ html_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
 
 #html_favicon = 'favicon.ico'
 html_favicon = 'docs/figures/spkitlogo.png'
+
+import spkit
+
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
