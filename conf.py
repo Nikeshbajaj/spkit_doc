@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'SpKit: Signal Processing ToolKit'
+project = 'SpKit'
 copyright = '2022, Nikesh Bajaj'
 author = 'Nikesh Bajaj'
 
