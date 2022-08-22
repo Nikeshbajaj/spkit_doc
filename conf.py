@@ -93,8 +93,11 @@ html_title = 'SpKit Documentation'
 import spkit
 
 
+#html_sidebars = {
+#   '**': ['localtoc.html', "relations.html", 'quicklinks.html', 'searchbox.html', 'editdocument.html'],
+#}
 html_sidebars = {
-   '**': ['localtoc.html', "relations.html", 'quicklinks.html', 'searchbox.html', 'editdocument.html'],
+   '**': ['localtoc.html', "relations.html", 'quicklinks.html', 'searchbox.html'],
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
