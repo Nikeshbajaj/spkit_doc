@@ -1,17 +1,64 @@
 API docs
 ========
 
+
 Entropy Functions
 -----------------
 
+
 .. autofunction:: spkit.entropy
 .. autofunction:: spkit.mutual_Info
-
-.. 
-    .. automodule:: spkit.core.infotheory
-        :members:
+.. autofunction:: spkit.dispersion_entropy
+.. autofunction:: spkit.dispersion_entropy_multiscale_refined
 
 
+.. automodule:: spkit.core.infotheory
+    :members:
+
+
+.. autofunction:: spkit.cwt.ScalogramCWT
+.. autofunction:: spkit.cwt.wavelet_filtering
+
+.. autofunction:: spkit.dft_analysis
+.. autofunction:: spkit.dft_synthesis
+.. autofunction:: spkit.stft_analysis
+.. autofunction:: spkit.stft_synthesis
+.. autofunction:: spkit.sineModel_analysis
+.. autofunction:: spkit.sineModel_synthesis
+
+.. autofunction:: spkit.frft
+.. autofunction:: spkit.ifrft
+.. autofunction:: spkit.ffrft
+.. autofunction:: spkit.iffrft
+    
+.. autofunction:: spkit.RFB
+.. autofunction:: spkit.RFB_prange
+.. autofunction:: spkit.Create_Dictionary
+.. autofunction:: spkit.PeriodStrength
+.. autofunction:: spkit.RFB_example_1
+.. autofunction:: spkit.RFB_example_2
+
+.. autofunction:: spkit.filterDC
+.. autofunction:: spkit.filterDC_sGolay
+.. autofunction:: spkit.filter_X
+
+
+.. autofunction:: spkit.eeg.ATAR
+.. autofunction:: spkit.eeg.ATAR_1Ch
+.. autofunction:: spkit.eeg.ATAR_mCh
+.. autofunction:: spkit.eeg.ICA_filtering
+.. autofunction:: spkit.eeg.ICAremoveArtifact
+
+
+.. autofunction:: spkit.ml.LR
+.. autofunction:: spkit.ml.LogisticRegression
+.. autofunction:: spkit.ml.NaiveBayes
+.. autofunction:: spkit.ml.ClassificationTree
+.. autofunction:: spkit.ml.RegressionTree
+
+
+Entropy Functions
+-----------------
 
 
 ::
