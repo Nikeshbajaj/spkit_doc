@@ -11,3 +11,4 @@ PyWavelets
 phyaat
 pylfsr
 PyWavelets
+numpydoc
