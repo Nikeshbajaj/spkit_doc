@@ -212,16 +212,16 @@ ChangeLog
    docs/changelog
 
 
-Index
+Index List
 ----------
+
+List
 
 .. toctree::
     :titlesonly:
     :glob:
 
-    *
-
-
+    docs/*
 
 
 Contacts
