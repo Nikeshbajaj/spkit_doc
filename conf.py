@@ -88,7 +88,7 @@ html_favicon = 'docs/figures/spkitlogo1.ico'
 
 html_last_updated_fmt = '%b %d, %Y'
 
-html_title = 'SpKit Documentation'
+html_title = 'SpKit'
 
 import spkit
 
