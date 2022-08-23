@@ -25,15 +25,14 @@ Signal Processing Toolkit - Documentation!
   :alt: GitHub
 
 ---
+.. seealso::
+    Version: 0.0.9.4 | Released on 01/01/2022
 
 .. important::
-
     Version: 0.0.9.4 | Released on 01/01/2022
 
 
-:Authors:
-    Nikesh Bajaj,
-    Jesús Requena Carrión
+:Authors: Nikesh Bajaj, Jesús Requena Carrión
 :Version: 0.0.9.4 | 01/01/2022
 :Home: https://spkit.github.io
 
