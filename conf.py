@@ -116,6 +116,12 @@ htmlhelp_basename = 'spkit-doc'
 
 numpydoc_class_members_toctree = False
 
+autodoc_typehints = "description"
+
+# Don't show class signature with the class' name.
+
+autodoc_class_signature = "separated"
+
 # plot_directive options
 plot_include_source = True
 plot_formats = [('png', 96), 'pdf']
