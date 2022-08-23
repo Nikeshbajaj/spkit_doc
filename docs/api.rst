@@ -11,24 +11,45 @@ Entropy Functions
 .. autofunction:: spkit.dispersion_entropy
 .. autofunction:: spkit.dispersion_entropy_multiscale_refined
 
+Information Theory Module
+-----------------
 
 .. automodule:: spkit.core.infotheory
     :members:
 
+Wavelet Analysis 
+-----------------
 
 .. autofunction:: spkit.cwt.ScalogramCWT
+
+
 .. autofunction:: spkit.cwt.wavelet_filtering
 
+Analysis & Synthesis Models
+-----------------
+
 .. autofunction:: spkit.dft_analysis
+
+
 .. autofunction:: spkit.dft_synthesis
+
+
 .. autofunction:: spkit.stft_analysis
+
+
 .. autofunction:: spkit.stft_synthesis
+
+
 .. autofunction:: spkit.sineModel_analysis
+
 .. autofunction:: spkit.sineModel_synthesis
 
 .. autofunction:: spkit.frft
+
 .. autofunction:: spkit.ifrft
+
 .. autofunction:: spkit.ffrft
+
 .. autofunction:: spkit.iffrft
     
 .. autofunction:: spkit.RFB
@@ -57,7 +78,7 @@ Entropy Functions
 .. autofunction:: spkit.ml.RegressionTree
 
 
-Entropy Functions
+List of all functions
 -----------------
 
 
