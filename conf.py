@@ -45,14 +45,24 @@ print("spkit (VERSION %s)" % (version,))
 #               'sphinx.ext.autosummary', 'numpydoc',
 #               'sphinx.ext.intersphinx',
 #               'matplotlib.sphinxext.plot_directive']
-extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.doctest',
-              'sphinx.ext.todo',
-              'sphinx.ext.coverage',
-              'sphinx.ext.mathjax',
-              'sphinx.ext.viewcode',
-              'sphinx.ext.napoleon']
+# extensions = ['sphinx.ext.autodoc',
+#               'sphinx.ext.doctest',
+#               'sphinx.ext.todo',
+#               'sphinx.ext.coverage',
+#               'sphinx.ext.mathjax',
+#               'sphinx.ext.viewcode',
+#               'sphinx.ext.napoleon']
 
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.intersphinx',
+    'sphinx_design',
+    'doi_role',
+    'matplotlib.sphinxext.plot_directive',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -141,3 +151,88 @@ plot_html_show_source_link = False
 
 intersphinx_mapping = {
     'numpy': ('https://numpy.org/devdocs', None)}
+
+
+# -----------------------------------------------------------------------------
+# Source code links
+# -----------------------------------------------------------------------------
+
+import re
+import inspect
+from os.path import relpath, dirname
+
+for name in ['sphinx.ext.linkcode', 'linkcode', 'numpydoc.linkcode']:
+    try:
+        __import__(name)
+        extensions.append(name)
+        break
+    except ImportError:
+        pass
+else:
+    print("NOTE: linkcode extension not found -- no links to source generated")
+
+def linkcode_resolve(domain, info):
+    """
+    Determine the URL corresponding to Python object
+    """
+    if domain != 'py':
+        return None
+
+    modname = info['module']
+    fullname = info['fullname']
+
+    submod = sys.modules.get(modname)
+    if submod is None:
+        return None
+
+    obj = submod
+    for part in fullname.split('.'):
+        try:
+            obj = getattr(obj, part)
+        except Exception:
+            return None
+
+    # Use the original function object if it is wrapped.
+    obj = getattr(obj, "__wrapped__", obj)
+    # SciPy's distributions are instances of *_gen. Point to this
+    # class since it contains the implementation of all the methods.
+    if isinstance(obj, (rv_generic, multi_rv_generic)):
+        obj = obj.__class__
+    try:
+        fn = inspect.getsourcefile(obj)
+    except Exception:
+        fn = None
+    if not fn:
+        try:
+            fn = inspect.getsourcefile(sys.modules[obj.__module__])
+        except Exception:
+            fn = None
+    if not fn:
+        return None
+
+    try:
+        source, lineno = inspect.getsourcelines(obj)
+    except Exception:
+        lineno = None
+
+    if lineno:
+        linespec = "#L%d-L%d" % (lineno, lineno + len(source) - 1)
+    else:
+        linespec = ""
+
+    startdir = os.path.abspath(os.path.join(dirname(scipy.__file__), '..'))
+    fn = relpath(fn, start=startdir).replace(os.path.sep, '/')
+
+    if fn.startswith('spkit/'):
+        m = re.match(r'^.*dev0\+([a-f0-9]+)$', spkit.__version__)
+        if m:
+            return "https://github.com/Nikeshbajaj/spkit/blob/%s/%s%s" % (
+                m.group(1), fn, linespec)
+        elif 'dev' in spkit.__version__:
+            return "https://github.com/Nikeshbajaj/spkit/blob/main/%s%s" % (
+                fn, linespec)
+        else:
+            return "https://github.com/Nikeshbajaj/spkit/blob/v%s/%s%s" % (
+                scipy.__version__, fn, linespec)
+    else:
+        return None
