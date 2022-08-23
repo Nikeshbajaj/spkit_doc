@@ -212,6 +212,18 @@ ChangeLog
    docs/changelog
 
 
+Index
+----------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    *
+
+
+
+
 Contacts
 ----------
 
