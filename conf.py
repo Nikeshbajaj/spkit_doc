@@ -93,7 +93,7 @@ html_theme = 'nature'
 
 #html_favicon = 'favicon.ico'
 #html_favicon = 'docs/figures/spkitlogo1.ico'
-html_favicon = '_static/spkitlogo6.ico'
+html_favicon = '_static/spkitlogo7.ico'
 
 
 
