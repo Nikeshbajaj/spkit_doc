@@ -224,6 +224,11 @@ List
 
     docs/*
 
+.. toctree::
+   :hidden:
+
+   docs/index
+   docs/index2
 
 Contacts
 ----------
