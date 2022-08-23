@@ -26,13 +26,11 @@ Signal Processing Toolkit - Documentation!
 
 ---
 
-.. topic::
-
+.. topic:: *
+   
    * **Authors**: Nikesh Bajaj, Jesús Requena Carrión
    * **Version**: 0.0.9.4 | 01/01/2022
    * **Homepage**   : https://spkit.github.io
-
-
 
 .. seealso:: Info
    
@@ -40,13 +38,11 @@ Signal Processing Toolkit - Documentation!
 
 
 .. 
-    .. important::
-    
-    Version: 0.0.9.4 | Released on 01/01/2022
-    
-    :Authors: Nikesh Bajaj, Jesús Requena Carrión
-    :Version: 0.0.9.4 | 01/01/2022
-    :Home: https://spkit.github.io
+   .. important::
+   Version: 0.0.9.4 | Released on 01/01/2022
+   :Authors: Nikesh Bajaj, Jesús Requena Carrión
+   :Version: 0.0.9.4 | 01/01/2022
+   :Home: https://spkit.github.io
 
 
 * Homepage *spkit* - https://spkit.github.io
