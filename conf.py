@@ -87,9 +87,12 @@ html_theme = 'nature'
 #html_favicon = 'docs/figures/spkitlogo1.ico'
 html_favicon = '_static/spkitlogo6.ico'
 
+
+
+
 html_last_updated_fmt = '%b %d, %Y'
 
-html_title = 'SpKit
+html_title = 'SpKit'
 import spkit
 
 
