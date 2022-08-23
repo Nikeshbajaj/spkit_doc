@@ -40,11 +40,19 @@ print("spkit (VERSION %s)" % (version,))
 # ones.
 #extensions = []
 #extensions = ['sphinx.ext.autodoc']
-extensions = ['sphinx.ext.doctest', 'sphinx.ext.autodoc', 'sphinx.ext.todo',
-              'sphinx.ext.extlinks', 'sphinx.ext.mathjax',
-              'sphinx.ext.autosummary', 'numpydoc',
-              'sphinx.ext.intersphinx',
-              'matplotlib.sphinxext.plot_directive']
+# extensions = ['sphinx.ext.doctest', 'sphinx.ext.autodoc', 'sphinx.ext.todo',
+#               'sphinx.ext.extlinks', 'sphinx.ext.mathjax',
+#               'sphinx.ext.autosummary', 'numpydoc',
+#               'sphinx.ext.intersphinx',
+#               'matplotlib.sphinxext.plot_directive']
+extensions = ['sphinx.ext.autodoc',
+              'sphinx.ext.doctest',
+              'sphinx.ext.todo',
+              'sphinx.ext.coverage',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.napoleon']
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
