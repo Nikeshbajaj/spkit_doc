@@ -204,11 +204,12 @@ Contacts
    contacts
    phasemap_example1
    
+..
+  
+  Experimental
+  ---------- 
 
-Experimental
----------- 
+  .. toctree::
+     :maxdepth: 1
 
-.. toctree::
-   :maxdepth: 1
-   
-   phasemap_example1
+     phasemap_example1
