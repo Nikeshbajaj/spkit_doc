@@ -202,5 +202,13 @@ Contacts
    :maxdepth: 1
    
    contacts
+   phasemap_example1
    
+
+Experimental
+---------- 
+
+.. toctree::
+   :maxdepth: 1
    
+   phasemap_example1
