@@ -14,7 +14,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import re
+#import re
+import os, sys, re
 import datetime
 
 # -- Project information -----------------------------------------------------
@@ -196,8 +197,8 @@ def linkcode_resolve(domain, info):
     obj = getattr(obj, "__wrapped__", obj)
     # SciPy's distributions are instances of *_gen. Point to this
     # class since it contains the implementation of all the methods.
-    if isinstance(obj, (rv_generic, multi_rv_generic)):
-        obj = obj.__class__
+    #if isinstance(obj, (rv_generic, multi_rv_generic)):
+    #    obj = obj.__class__
     try:
         fn = inspect.getsourcefile(obj)
     except Exception:
@@ -220,7 +221,7 @@ def linkcode_resolve(domain, info):
     else:
         linespec = ""
 
-    startdir = os.path.abspath(os.path.join(dirname(scipy.__file__), '..'))
+    startdir = os.path.abspath(os.path.join(dirname(spkit.__file__), '..'))
     fn = relpath(fn, start=startdir).replace(os.path.sep, '/')
 
     if fn.startswith('spkit/'):
@@ -232,7 +233,7 @@ def linkcode_resolve(domain, info):
             return "https://github.com/Nikeshbajaj/spkit/blob/main/%s%s" % (
                 fn, linespec)
         else:
-            return "https://github.com/Nikeshbajaj/spkit/blob/v%s/%s%s" % (
-                scipy.__version__, fn, linespec)
+            return "https://github.com/Nikeshbajaj/spkit/blob/%s/%s%s" % (
+                spkit.__version__, fn, linespec)
     else:
         return None
