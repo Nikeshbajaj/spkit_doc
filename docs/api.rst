@@ -7,9 +7,22 @@ Entropy Functions
 
 
 .. autofunction:: spkit.entropy
+
+.. rst-class:: page-break
+
+
 .. autofunction:: spkit.mutual_Info
+
+.. rst-class:: page-break
+
+
 .. autofunction:: spkit.dispersion_entropy
+
+.. rst-class:: page-break
+
 .. autofunction:: spkit.dispersion_entropy_multiscale_refined
+
+.. rst-class:: page-break
 
 Information Theory Module
 -----------------
