@@ -32,7 +32,7 @@ import pylfsr
 version = re.sub(r'\.dev0+.*$', r'.dev', pylfsr.__version__)
 release = pylfsr.__version__
 
-print("spkit (VERSION %s)" % (version,))
+print("pylfsr (VERSION %s)" % (version,))
 
 # -- General configuration ---------------------------------------------------
 
@@ -104,7 +104,7 @@ html_theme = 'nature'
 
 #html_favicon = 'favicon.ico'
 #html_favicon = 'docs/figures/spkitlogo1.ico'
-html_favicon = '_static/spkitlogo7.ico'
+#html_favicon = '_static/spkitlogo7.ico'
 
 
 
@@ -112,7 +112,7 @@ html_favicon = '_static/spkitlogo7.ico'
 html_last_updated_fmt = '%b %d, %Y'
 
 html_title = 'pyLFSR'
-import spkit
+import pylfsr
 
 
 #html_sidebars = {
@@ -131,7 +131,7 @@ html_static_path = ['_static']
 html_show_sourcelink = False
 
 
-html_use_opensearch = 'http://spkit-doc.readthedocs.org'
+html_use_opensearch = 'http://pylfsr-doc.readthedocs.org'
 
 htmlhelp_basename = 'pylfsr-doc'
 
@@ -234,6 +234,6 @@ def linkcode_resolve(domain, info):
                 fn, linespec)
         else:
             return "https://github.com/Nikeshbajaj/pylfsr/blob/%s/%s%s" % (
-                spkit.__version__, fn, linespec)
+                pylfsr.__version__, fn, linespec)
     else:
         return None
