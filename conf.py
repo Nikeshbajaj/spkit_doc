@@ -20,7 +20,7 @@ import datetime
 
 # -- Project information -----------------------------------------------------
 
-project = 'PyLFSR'
+project = 'SpKit'
 #copyright = '2022, Nikesh Bajaj'
 copyright = '2019-%s, Nikesh Bajaj' % datetime.date.today().year
 author = 'Nikesh Bajaj'
@@ -28,11 +28,11 @@ author = 'Nikesh Bajaj'
 # The full version, including alpha/beta/rc tags
 release = '0.0.9.4'
 
-import pylfsr
-version = re.sub(r'\.dev0+.*$', r'.dev', pylfsr.__version__)
-release = pylfsr.__version__
+import spkit
+version = re.sub(r'\.dev0+.*$', r'.dev', spkit.__version__)
+release = spkit.__version__
 
-print("pylfsr (VERSION %s)" % (version,))
+print("spkit (VERSION %s)" % (version,))
 
 # -- General configuration ---------------------------------------------------
 
@@ -98,7 +98,7 @@ master_doc = 'index'
 
 pygments_style = 'sphinx'
 
-modindex_common_prefix = ['pylfsr.']
+modindex_common_prefix = ['spkit.']
 
 html_theme = 'nature'
 
@@ -111,8 +111,8 @@ html_theme = 'nature'
 
 html_last_updated_fmt = '%b %d, %Y'
 
-html_title = 'pyLFSR'
-import pylfsr
+html_title = 'SpKit'
+import spkit
 
 
 #html_sidebars = {
@@ -131,9 +131,9 @@ html_static_path = ['_static']
 html_show_sourcelink = False
 
 
-html_use_opensearch = 'http://pylfsr-doc.readthedocs.org'
+html_use_opensearch = 'http://spkit-doc.readthedocs.org'
 
-htmlhelp_basename = 'pylfsr-doc'
+htmlhelp_basename = 'spkit-doc'
 
 
 numpydoc_class_members_toctree = False
@@ -221,19 +221,19 @@ def linkcode_resolve(domain, info):
     else:
         linespec = ""
 
-    startdir = os.path.abspath(os.path.join(dirname(pylfsr.__file__), '..'))
+    startdir = os.path.abspath(os.path.join(dirname(spkit.__file__), '..'))
     fn = relpath(fn, start=startdir).replace(os.path.sep, '/')
 
-    if fn.startswith('pylfsr/'):
-        m = re.match(r'^.*dev0\+([a-f0-9]+)$', pylfsr.__version__)
+    if fn.startswith('spkit/'):
+        m = re.match(r'^.*dev0\+([a-f0-9]+)$', spkit.__version__)
         if m:
-            return "https://github.com/Nikeshbajaj/pylfsr/blob/%s/%s%s" % (
+            return "https://github.com/Nikeshbajaj/spkit/blob/%s/%s%s" % (
                 m.group(1), fn, linespec)
-        elif 'dev' in pylfsr.__version__:
-            return "https://github.com/Nikeshbajaj/pylfsr/blob/main/%s%s" % (
+        elif 'dev' in spkit.__version__:
+            return "https://github.com/Nikeshbajaj/spkit/blob/main/%s%s" % (
                 fn, linespec)
         else:
-            return "https://github.com/Nikeshbajaj/pylfsr/blob/%s/%s%s" % (
-                pylfsr.__version__, fn, linespec)
+            return "https://github.com/Nikeshbajaj/spkit/blob/%s/%s%s" % (
+                spkit.__version__, fn, linespec)
     else:
         return None
